@@ -1,0 +1,27 @@
+* Force Field Parameter File.
+* 
+
+BOND
+ca ca  461.10   1.398
+ca ha  345.80   1.086
+ca cl  305.60   1.750
+
+ANGLE
+ca ca ca   66.600     120.020
+ca ca ha   48.200     119.880
+ca ca cl   57.900     119.390
+
+DIHEDRAL
+X  ca ca X      3.625         2     180.0
+
+IMPHI
+X  X  ca ha     1.100         2     180.0
+ca ca ca cl     1.100         2     180.0
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+cl      0.00   -0.2650    1.9480      0.00   -0.1325    1.9480
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590

@@ -1,0 +1,100 @@
+Remarks opt_CNS.top created by acpype (v: 2023.10.27) on Sat Jul 20 18:00:36 2024
+
+set echo=false end
+
+autogenerate angles=True dihedrals=True end
+
+{ atomType  mass }
+MASS ca_     12.010
+MASS cl_     35.450
+MASS ha_      1.008
+
+RESIdue UNL
+
+GROUP
+
+{ atomName  atomType  Charge }
+ATOM C     TYPE= ca_   CHARGE=  -0.0970 END
+ATOM C1    TYPE= ca_   CHARGE=  -0.0910 END
+ATOM C2    TYPE= ca_   CHARGE=  -0.0990 END
+ATOM C3    TYPE= ca_   CHARGE=  -0.0910 END
+ATOM C4    TYPE= ca_   CHARGE=  -0.0970 END
+ATOM C5    TYPE= ca_   CHARGE=  -0.0306 END
+ATOM CL    TYPE= cl_   CHARGE=  -0.0434 END
+ATOM H     TYPE= ha_   CHARGE=   0.1165 END
+ATOM H1    TYPE= ha_   CHARGE=   0.1050 END
+ATOM H2    TYPE= ha_   CHARGE=   0.1060 END
+ATOM H3    TYPE= ha_   CHARGE=   0.1050 END
+ATOM H4    TYPE= ha_   CHARGE=   0.1165 END
+
+{ Bonds: atomName1  atomName2 }
+BOND C     H    
+BOND C1    H1   
+BOND C2    H2   
+BOND C3    H3   
+BOND C4    H4   
+BOND C     C5   
+BOND C     C1   
+BOND C1    C2   
+BOND C2    C3   
+BOND C3    C4   
+BOND C4    C5   
+BOND C5    CL   
+
+{ Angles: atomName1 atomName2 atomName3}
+ANGLe C     C1    H1   
+ANGLe C1    C     H    
+ANGLe C1    C2    H2   
+ANGLe C2    C1    H1   
+ANGLe C2    C3    H3   
+ANGLe C3    C4    H4   
+ANGLe C3    C2    H2   
+ANGLe C4    C3    H3   
+ANGLe C5    C     H    
+ANGLe C5    C4    H4   
+ANGLe C     C5    CL   
+ANGLe C     C5    C4   
+ANGLe C     C1    C2   
+ANGLe C1    C     C5   
+ANGLe C1    C2    C3   
+ANGLe C2    C3    C4   
+ANGLe C3    C4    C5   
+ANGLe C4    C5    CL   
+
+{ Proper Dihedrals: name1 name2 name3 name4 }
+DIHEdral C     C5    C4    H4   
+DIHEdral C     C1    C2    H2   
+DIHEdral C1    C2    C3    H3   
+DIHEdral H     C     C1    C2   
+DIHEdral C2    C3    C4    H4   
+DIHEdral C3    C2    C1    H1   
+DIHEdral H     C     C5    C4   
+DIHEdral C4    C3    C2    H2   
+DIHEdral C5    C     C1    H1   
+DIHEdral C5    C4    C3    H3   
+DIHEdral H     C     C5    CL   
+DIHEdral CL    C5    C4    H4   
+DIHEdral H     C     C1    H1   
+DIHEdral H1    C1    C2    H2   
+DIHEdral H2    C2    C3    H3   
+DIHEdral H3    C3    C4    H4   
+DIHEdral C     C5    C4    C3   
+DIHEdral C     C1    C2    C3   
+DIHEdral C1    C     C5    CL   
+DIHEdral C1    C     C5    C4   
+DIHEdral C1    C2    C3    C4   
+DIHEdral C5    C     C1    C2   
+DIHEdral C2    C3    C4    C5   
+DIHEdral C3    C4    C5    CL   
+
+{ Improper Dihedrals: aName1 aName2 aName3 aName4 }
+IMPRoper H     C     C5    C1   
+IMPRoper C     C2    C1    H1   
+IMPRoper C1    C3    C2    H2   
+IMPRoper C2    C4    C3    H3   
+IMPRoper C3    C5    C4    H4   
+IMPRoper C     C4    C5    CL   
+
+END {RESIdue UNL}
+
+set echo=true end

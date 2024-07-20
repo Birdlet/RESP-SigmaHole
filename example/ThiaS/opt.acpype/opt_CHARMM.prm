@@ -1,0 +1,48 @@
+* Force Field Parameter File.
+* 
+
+BOND
+cc cc  419.80   1.428
+cc ss  265.80   1.756
+cc h4  352.00   1.082
+cc nc  441.10   1.369
+cd nc  525.40   1.317
+cd ss  265.80   1.756
+cd h5  351.80   1.082
+
+ANGLE
+cc cc nc   67.600     121.980
+cc cc h4   45.900     127.960
+cc ss cd   66.000      90.760
+cc cc ss   61.900     120.210
+cc nc cd   71.800     105.490
+nc cc h4   50.000     121.140
+nc cd ss   66.000     114.510
+nc cd h5   50.600     125.520
+ss cc h4   42.100     119.970
+ss cd h5   41.900     121.020
+
+DIHEDRAL
+X  cc cc X      4.000         2     180.0
+cc cc ss cd     1.100         2     180.0      ! same as X  c2 ss X 
+h4 cc ss cd     1.100         2     180.0      ! same as X  c2 ss X 
+X  cc nc X      4.750         2     180.0
+X  cd nc X      4.750         2     180.0
+nc cd ss cc     1.100         2     180.0      ! same as X  c2 ss X 
+h5 cd ss cc     1.100         2     180.0      ! same as X  c2 ss X 
+
+IMPHI
+cc h4 cc ss     1.100         2     180.0	! Using default value
+cc h4 cc nc     1.100         2     180.0	! Using default value
+h5 nc cd ss     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+cc      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+nc      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+cd      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ss      0.00   -0.2500    2.0000      0.00   -0.1250    2.0000
+h4      0.00   -0.0150    1.4090      0.00   -0.0075    1.4090
+h5      0.00   -0.0150    1.3590      0.00   -0.0075    1.3590

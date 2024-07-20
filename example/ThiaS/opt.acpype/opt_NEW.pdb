@@ -1,0 +1,10 @@
+REMARK opt_NEW.pdb created by acpype (v: 2023.10.27) on Sat Jul 20 18:36:15 2024
+ATOM      1    C UNL Z   1      -0.029   1.240   0.004  1.00  0.00           C
+ATOM      2   C1 UNL Z   1       1.242   0.741  -0.003  1.00  0.00           C
+ATOM      3    N UNL Z   1       1.355  -0.632  -0.009  1.00  0.00           N
+ATOM      4   C2 UNL Z   1       0.177  -1.183  -0.005  1.00  0.00           C
+ATOM      5    S UNL Z   1      -1.172  -0.066   0.006  1.00  0.00           S
+ATOM      6    H UNL Z   1      -0.349   2.273   0.009  1.00  0.00           H
+ATOM      7   H1 UNL Z   1       2.143   1.343  -0.005  1.00  0.00           H
+ATOM      8   H2 UNL Z   1       0.006  -2.254  -0.008  1.00  0.00           H
+END

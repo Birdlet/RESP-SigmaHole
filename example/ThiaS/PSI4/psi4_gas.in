@@ -1,0 +1,34 @@
+
+# Any line starting with the # character is a comment line
+#! Sample HF/cc-pVDZ H2O computation
+
+memory 2 GB
+
+
+molecule CONF {
+ 0 1
+ C   -0.029238967300    1.240021833635    0.004102331159
+ C    1.242028608894    0.741115265396   -0.003124609082
+ N    1.354559890716   -0.632373140779   -0.008846803607
+ C    0.176855763750   -1.183135447176   -0.005238541611
+ S   -1.171609008388   -0.065493748636    0.005619362356
+ H   -0.348919273734    2.272940280758    0.008995561561
+ H    2.143339189763    1.343327924016   -0.005248346965
+ H    0.006507119362   -2.253810619930   -0.008361480992
+}
+
+
+set {
+    freeze_core True
+}
+
+basis {
+    assign 6-311g*
+    assign I  def2-tzvp
+}
+
+# set cubeprop_tasks ['esp']
+
+E, wfn = prop('b3lyp-d3', properties=["GRID_ESP", "GRID_FIELD"], return_wfn=True)
+oeprop(wfn, 'DIPOLE', 'QUADRUPOLE', title='DIPOLE+QUADRUPOLE')
+# cubeprop(wfn)

@@ -1,0 +1,58 @@
+
+# Any line starting with the # character is a comment line
+#! Sample HF/cc-pVDZ H2O computation
+
+memory 2 GB
+
+
+molecule CONF {
+ 0 1
+ S   -0.726492725992    1.277392911722    0.000000000000
+ C   -2.254362791835    0.473698150776    0.000000000000
+ C   -2.129371003352   -0.894157665743    0.000000000000
+ C   -0.771699853753   -1.309562098374    0.000000000000
+ C    0.120003840247   -0.255222714470    0.000000000000
+ C    1.591153343241   -0.238551952492    0.000000000000
+ C    2.347244229734   -1.559923109289    0.000000000000
+ O    2.206259127466    0.820391127761    0.000000000000
+ H   -3.171007778334    1.049993299583    0.000000000000
+ H   -2.973175931057   -1.575228021337    0.000000000000
+ H   -0.465952234395   -2.349284833877    0.000000000000
+ H    1.711926637512   -2.447608295031    0.000000000000
+ H    2.996291696508   -1.584886604601   -0.881486126134
+ H    2.996291696508   -1.584886604601    0.881486126134
+}
+
+
+set {
+    freeze_core True
+    pcm true
+    pcm_scf_type total
+}
+
+basis {
+    assign 6-311g*
+    assign I  def2-tzvp
+}
+
+pcm = {
+   Units = Angstrom
+   Medium {
+   SolverType = IEFPCM
+   Solvent = Water
+   }
+
+   Cavity {
+   RadiiSet = UFF
+   Type = GePol
+   Scaling = False
+   Area = 0.3
+   Mode = Implicit
+   }
+}
+# set cubeprop_tasks ['esp']
+
+E, wfn = prop('b3lyp-d3', properties=["GRID_ESP", "GRID_FIELD"], return_wfn=True)
+oeprop(wfn, 'DIPOLE', 'QUADRUPOLE', title='DIPOLE+QUADRUPOLE')
+
+# cubeprop(wfn)

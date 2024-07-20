@@ -1,0 +1,53 @@
+Remarks opt_CNS.par created by acpype (v: 2023.10.27) on Sat Jul 20 18:36:15 2024
+
+set echo=false end
+
+{ Bonds: atomType1 atomType2 kb r0 }
+BOND   cc_   h4_    403.9   1.0820
+BOND   cd_   h5_    403.7   1.0820
+BOND   cc_   cc_    340.2   1.4280
+BOND   cc_   ss_    232.0   1.7560
+BOND   cc_   nc_    369.1   1.3690
+BOND   nc_   cd_    450.7   1.3170
+BOND   cd_   ss_    232.0   1.7560
+
+{ Angles: aType1 aType2 aType3 kt t0 }
+ANGLe   cc_   cc_   h4_     46.3   127.96
+ANGLe   nc_   cd_   h5_     62.5   125.52
+ANGLe   nc_   cc_   h4_     61.7   121.14
+ANGLe   ss_   cd_   h5_     42.3   121.02
+ANGLe   ss_   cc_   h4_     42.5   119.97
+ANGLe   cc_   cc_   nc_     85.3   121.98
+ANGLe   cc_   ss_   cd_     77.8    90.76
+ANGLe   cc_   nc_   cd_     73.9   105.49
+ANGLe   cc_   cc_   ss_     63.9   120.21
+ANGLe   nc_   cd_   ss_     83.3   114.51
+
+{ Proper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+DIHEdral   cc_   ss_   cd_   h5_           1.100    2   180.00
+DIHEdral   cc_   ss_   cd_   nc_           1.100    2   180.00
+DIHEdral   ss_   cc_   cc_   h4_           4.000    2   180.00
+DIHEdral   ss_   cc_   cc_   nc_           4.000    2   180.00
+DIHEdral   cd_   nc_   cc_   h4_           4.750    2   180.00
+DIHEdral   cc_   nc_   cd_   h5_           4.750    2   180.00
+DIHEdral   cc_   cc_   nc_   cd_           4.750    2   180.00
+DIHEdral   cc_   nc_   cd_   ss_           4.750    2   180.00
+DIHEdral   h4_   cc_   cc_   h4_           4.000    2   180.00
+DIHEdral   h4_   cc_   cc_   nc_           4.000    2   180.00
+DIHEdral   cc_   cc_   ss_   cd_           1.100    2   180.00
+DIHEdral   h4_   cc_   ss_   cd_           1.100    2   180.00
+
+{ Improper Dihedrals: aType1 aType2 aType3 aType4 kt period phase }
+IMPRoper   h5_   nc_   cd_   ss_           1.1    2   180.00
+IMPRoper   cc_   h4_   cc_   nc_           1.1    2   180.00
+IMPRoper   ss_   cc_   h4_   cc_           1.1    2   180.00
+
+{ Nonbonded: Type Emin sigma; (1-4): Emin/2 sigma }
+NONBonded   cc_    0.098800    3.315212    0.049400    3.315212
+NONBonded   nc_    0.094100    3.384168    0.047050    3.384168
+NONBonded   cd_    0.098800    3.315212    0.049400    3.315212
+NONBonded   ss_    0.282400    3.532413    0.141200    3.532413
+NONBonded   h4_    0.016100    2.536389    0.008050    2.536389
+NONBonded   h5_    0.016100    2.447299    0.008050    2.447299
+
+set echo=true end

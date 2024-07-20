@@ -1,0 +1,20 @@
+; opt_GMX.top created by acpype (v: 2023.10.27) on Sat Jul 20 18:35:37 2024
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333333333
+
+; Include opt_GMX.itp topology
+#include "opt_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_opt.itp"
+#endif
+
+[ system ]
+ opt
+
+[ molecules ]
+; Compound        nmols
+ opt              1     

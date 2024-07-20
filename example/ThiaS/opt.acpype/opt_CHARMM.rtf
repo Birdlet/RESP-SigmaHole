@@ -1,0 +1,61 @@
+* Topology File.
+* 
+   99   1
+MASS     1 cc     12.010000
+MASS     2 nc     14.010000
+MASS     3 cd     12.010000
+MASS     4 ss     32.060000
+MASS     5 h4      1.008000
+MASS     6 h5      1.008000
+
+RESI UNL  0.002
+GROUP
+ATOM C     cc     -0.114400
+ATOM C1    cc      0.347200
+ATOM N     nc     -0.557000
+ATOM C2    cd      0.479300
+ATOM S     ss     -0.324300
+ATOM H     h4      0.157000
+ATOM H1    h4      0.000100
+ATOM H2    h5      0.014100
+
+BOND C     C1           	! dist	    1.3655
+BOND C     S            	! dist	    1.7355
+BOND C     H            	! dist	    1.0814
+BOND C1    N            	! dist	    1.3777
+BOND C1    H1           	! dist	    1.0836
+BOND N     C2           	! dist	    1.3005
+BOND C2    S            	! dist	    1.7515
+BOND C2    H2           	! dist	    1.0846
+
+ANGL C     C1    N             	! angle	  116.1409
+ANGL C     C1    H1            	! angle	  124.8162
+ANGL C     S     C2            	! angle	   88.4329
+ANGL C1    C     S             	! angle	  109.7570
+ANGL C1    C     H             	! angle	  128.6476
+ANGL C1    N     C2            	! angle	  110.3614
+ANGL N     C1    H1            	! angle	  119.0429
+ANGL N     C2    S             	! angle	  115.3076
+ANGL N     C2    H2            	! angle	  124.1380
+ANGL S     C     H             	! angle	  121.5953
+ANGL S     C2    H2            	! angle	  120.5543
+
+DIHE S     C     C1    N    	! dihe	    0.0985
+DIHE H     C     C1    N    	! dihe	 -179.9705
+DIHE S     C     C1    H1   	! dihe	 -179.9599
+DIHE H     C     C1    H1   	! dihe	   -0.0289
+DIHE C1    C     S     C2   	! dihe	   -0.0698
+DIHE H     C     S     C2   	! dihe	  179.9934
+DIHE C     C1    N     C2   	! dihe	   -0.0759
+DIHE H1    C1    N     C2   	! dihe	  179.9789
+DIHE C1    N     C2    S    	! dihe	    0.0169
+DIHE C1    N     C2    H2   	! dihe	 -179.9794
+DIHE N     C2    S     C    	! dihe	    0.0314
+DIHE H2    C2    S     C    	! dihe	 -179.9722
+
+IMPH C1    H     C     S    
+IMPH C     H1    C1    N    
+IMPH H2    N     C2    S    
+
+
+

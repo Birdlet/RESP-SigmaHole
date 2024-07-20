@@ -1,0 +1,73 @@
+Remarks opt_CNS.top created by acpype (v: 2023.10.27) on Sat Jul 20 18:36:15 2024
+
+set echo=false end
+
+autogenerate angles=True dihedrals=True end
+
+{ atomType  mass }
+MASS cc_     12.010
+MASS nc_     14.010
+MASS cd_     12.010
+MASS ss_     32.060
+MASS h4_      1.008
+MASS h5_      1.008
+
+RESIdue UNL
+
+GROUP
+
+{ atomName  atomType  Charge }
+ATOM C     TYPE= cc_   CHARGE=  -0.1144 END
+ATOM C1    TYPE= cc_   CHARGE=   0.3472 END
+ATOM N     TYPE= nc_   CHARGE=  -0.5590 END
+ATOM C2    TYPE= cd_   CHARGE=   0.4793 END
+ATOM S     TYPE= ss_   CHARGE=  -0.3243 END
+ATOM H     TYPE= h4_   CHARGE=   0.1570 END
+ATOM H1    TYPE= h4_   CHARGE=   0.0001 END
+ATOM H2    TYPE= h5_   CHARGE=   0.0141 END
+
+{ Bonds: atomName1  atomName2 }
+BOND C     H    
+BOND C1    H1   
+BOND C2    H2   
+BOND C     C1   
+BOND C     S    
+BOND C1    N    
+BOND N     C2   
+BOND C2    S    
+
+{ Angles: atomName1 atomName2 atomName3}
+ANGLe C     C1    H1   
+ANGLe C1    C     H    
+ANGLe N     C2    H2   
+ANGLe N     C1    H1   
+ANGLe S     C2    H2   
+ANGLe S     C     H    
+ANGLe C     C1    N    
+ANGLe C     S     C2   
+ANGLe C1    N     C2   
+ANGLe C1    C     S    
+ANGLe N     C2    S    
+
+{ Proper Dihedrals: name1 name2 name3 name4 }
+DIHEdral C     S     C2    H2   
+DIHEdral C1    N     C2    H2   
+DIHEdral H     C     C1    N    
+DIHEdral C2    N     C1    H1   
+DIHEdral H     C     S     C2   
+DIHEdral S     C     C1    H1   
+DIHEdral H     C     C1    H1   
+DIHEdral C     C1    N     C2   
+DIHEdral C     S     C2    N    
+DIHEdral C1    N     C2    S    
+DIHEdral C1    C     S     C2   
+DIHEdral S     C     C1    N    
+
+{ Improper Dihedrals: aName1 aName2 aName3 aName4 }
+IMPRoper S     C     H     C1   
+IMPRoper C     H1    C1    N    
+IMPRoper H2    N     C2    S    
+
+END {RESIdue UNL}
+
+set echo=true end

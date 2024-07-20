@@ -1,0 +1,32 @@
+
+# Any line starting with the # character is a comment line
+#! Sample HF/cc-pVDZ H2O computation
+
+memory 2 GB
+
+
+molecule CONF {
+ 0 1
+C         -0.01140        1.25540        0.00110
+C          1.27560        0.76130       -0.00670
+N          1.38850       -0.61530       -0.01120
+C          0.18560       -1.14720       -0.00830
+S         -1.13000       -0.04520        0.00150
+H         -0.33720        2.28530        0.00600
+H          2.17480        1.36560       -0.00960
+H          0.02720       -2.21770       -0.01210
+}
+
+
+set {
+    freeze_core True
+}
+
+basis {
+    assign 6-31g*
+    assign I  lanl2dz
+}
+
+optimize('b3lyp-d3')
+CONF.save_xyz_file("opt.xyz", 1)
+
