@@ -1,0 +1,20 @@
+@<TRIPOS>MOLECULE
+F3Cl
+5   4    1
+SMALL
+USER_CHARGES
+
+
+@<TRIPOS>ATOM
+      1 C1          0.1793    0.3089    0.2276 C.3       1 UNK         0.0000 
+      2 F2          0.5504    1.1975   -0.7748 F         1 UNK         0.0000 
+      3 F3         -0.4757   -0.7793   -0.3370 F         1 UNK         0.0000 
+      4 F4          1.3135   -0.1309    0.9001 F         1 UNK         0.0000 
+      5 Cl5        -0.8850    1.1094    1.3474 Cl        1 UNK         0.0000 
+@<TRIPOS>BOND
+     1    1    2 1    
+     2    1    3 1    
+     3    1    4 1    
+     4    1    5 1    
+@<TRIPOS>SUBSTRUCTURE
+     1 UNK         1 GROUP             0       ****    0 ROOT    
